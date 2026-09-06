@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Detector Result</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(20, 20, 20, 0.9);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px #00ff00;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #00ff00;
+            text-shadow: 0 0 10px #00ff00;
+        }
+
+        .score {
+            font-size: 22px;
+            margin: 15px 0;
+        }
+
+        .score.high {
+            color: red;
+            font-weight: bold;
+            text-shadow: 0 0 10px red;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        li {
+            margin: 8px 0;
+            padding: 8px;
+            background-color: #111;
+            border-left: 3px solid #00ff00;
+            border-radius: 6px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 20px;
+            background-color: #00ff00;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+            transition: 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #0f0;
+            box-shadow: 0 0 15px #00ff00;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            .score {
+                font-size: 18px;
+            }
+            li {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Analysis Result</h2>
+        <p class="score {% if score > 40 %}high{% endif %}">Score: {{ score }}%</p>
+        <ul>
+            {% for reason in reasons %}
+                <li>{{ reason }}</li>
+            {% endfor %}
+        </ul>
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>
+
