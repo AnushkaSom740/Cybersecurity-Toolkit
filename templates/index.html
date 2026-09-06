@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Detector</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #00ff00;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(20, 20, 20, 0.9);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px #00ff00;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #00ff00;
+            text-shadow: 0 0 10px #00ff00;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        textarea, input[type="text"], input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            border: 2px solid #00ff00;
+            border-radius: 6px;
+            background-color: #111;
+            color: #00ff00;
+            font-size: 14px;
+            resize: none;
+        }
+
+        textarea:focus, input:focus {
+            outline: none;
+            box-shadow: 0 0 10px #00ff00;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #00ff00;
+            color: #000;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0f0;
+            box-shadow: 0 0 15px #00ff00;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            textarea, input[type="text"], input[type="file"] {
+                font-size: 12px;
+            }
+            button {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Phishing Detector Tool</h2>
+        <form action="/analyze" method="post" enctype="multipart/form-data">
+            <label>Email Content:</label>
+            <textarea name="email_text" rows="10"></textarea>
+
+            <label>URL:</label>
+            <input type="text" name="url">
+
+            <label>Upload Attachment:</label>
+            <input type="file" name="attachment">
+
+            <button type="submit">Analyze</button>
+        </form>
+    </div>
+</body>
+</html>
