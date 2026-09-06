@@ -1,0 +1,7 @@
+Score: 60% | Reasons: Suspicious URL/domain, Risky attachment: SpotifySetup.exe
+Score: 80% | Reasons: Keywords found: bank, locked, Suspicious URL/domain
+Score: 80% | Reasons: Keywords found: bank, locked, Suspicious URL/domain
+Score: 40% | Reasons: Suspicious URL/domain
+Score: 0% | Reasons: 
+Score: 100% | Reasons: Keywords found: bank, locked, Suspicious URL/domain, Risky attachment: SpotifySetup.exe
+Score: 100% | Reasons: Keywords found: bank, locked, Suspicious URL/domain, Risky attachment: SpotifySetup.exe
